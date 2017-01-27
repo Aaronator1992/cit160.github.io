@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Distance</title>
+
+<script type="text/javascript">
+/* Input: x and y for two points: x1, y1, x2, y2
+* Processing: Calculate the distance between the two points.
+* Output: the distance
+*/
+function distance() {
+// Get the coordinates for two points from the user.
+var x1 = parseFloat(document.getElementById('x1inputBox').value);
+var y1 = parseFloat(document.getElementById('y1inputBox').value);
+var x2 = parseFloat(document.getElementById('x2inputBox').value);
+var y2 = parseFloat(document.getElementById('y2inputBox').value);
+
+// Compute the distance between the two points.
+var dx = x2 - x1;
+var dy = y2 - y1;
+var dist = Math.sqrt(dx * dx + dy * dy);
+
+// Display the distance to the user.
+document.getElementById('outputDiv').innerHTML = dist;
+}
+</script>
+</head>
+
+<body>
+Please enter the x and y coordinates for two points:<br>
+(x1, y1) <input type="text" id="x1inputBox" size="3">  
+<input type="text" id="y1inputBox" size="3"><br>  
+(x2, y2) <input type="text" id="x2inputBox" size="3">  
+<input type="text" id="y2inputBox" size="3"><br>  
+<button type="button" onclick="distance()">Distance</button>  
+<div id="outputDiv"></div>  
+</body>
+</html>
