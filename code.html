@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Heart Zone</title>
+<script type="text/javascript">
+    /*input: age*/
+    /*processing: slowest + fastest heartbeat*/
+    /* */
+
+function heartRate(){
+var age = parseInt(document.getElementById('ageInput').value);
+var max = 220 - age;
+var slowest = max * 0.65;
+var fastest = max * 0.85;
+document.getElementById('output').innerHTML = slowest + " - " + fastest;
+}
+</script>
+</head>
+<body>
+Enter your age: <input type="text" id ="text" size = "3">
+
+<button type="button" onclick="heartRate">click</button>
+</body>
+</html>
