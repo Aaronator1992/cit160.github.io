@@ -4,14 +4,27 @@
 <meta charset="utf-8">
 <title>Title</title>
 <script type="text/javascript">
-function myFirstFunction(){
-//Get haircolor from user
-var hairColor = document.getElementById('dexter').value;
+    /* input: beginning mileage, ending mileage and total gallons used   */
+    /* processing: ending mileage - beginning mileage/total gallons used */
+    /* output: Miles Per Gallon                                          */
+
+function mileageToMpg(){
+    var endingMileage = parseFloat(document.getElementById('endingMileage').value);
+    var beginningMileage = parseFloat(document.getElementById('beginningMileage').value);
+    var totalGallons = parseFloat(document.getElementById('totalGallons').value);
+    var mileageToMpg = (endingMileage - beginningMileage) / totalGallons;
+    document.getElementById('output').innerHTML = mileageToMpg;
 }
 </script>
 </head>
 <body>
-<input type="text" id="dexter" size="6">
-<button type="button" onclick="myFirstFunction()">click</button>
+    Enter ending mileage:
+    <input type="text" id="endingMileage" size="9"> <br>
+    Enter beginning mileage:
+    <input type="text" id="beginningMileage" size="9"><br>
+    Enter total gallons used:
+    <input type="text" id="totalGallons" size="9">
+<button type="button" onclick="mileageToMpg()">Total MilesPerGallon</button>
+<div id = "output"></div>
 </body>
 </html>

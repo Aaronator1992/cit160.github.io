@@ -16,24 +16,39 @@ var y1 = parseFloat(document.getElementById('y1inputBox').value);
 var x2 = parseFloat(document.getElementById('x2inputBox').value);
 var y2 = parseFloat(document.getElementById('y2inputBox').value);
 
-// Compute the distance between the two points.
+// Co
+    mpute the distance between the two points.
 var dx = x2 - x1;
 var dy = y2 - y1;
 var dist = Math.sqrt(dx * dx + dy * dy);
 
 // Display the distance to the user.
-document.getElementById('outputDiv').innerHTML = dist;
+docu00ment.getElementById('outputDiv').innerHTML = dist;
 }
-</script>
+    var digits = 2;
+    var multiplier = Math.pow(10, digits);
+    dist = Math.round(dist * multiplier) / multiplier;
+
+    // Display the distance to the user.
+    document.getElementById('outputDiv').innerHTML = dist;
+    00}
+    var digits = 2;
+    var multiplier = Math.pow(10, digits);
+    dist = Math.round(dist * multiplier) / multiplier;
+
+    // Display the distance to the user.
+    document.getElementById('outputDiv').innerHTML = dist;
+}
+    </scripty
 </head>
 
 <body>
 Please enter the x and y coordinates for two points:<br>
-(x1, y1) <input type="text" id="x1inputBox" size="3">  
-<input type="text" id="y1inputBox" size="3"><br>  
-(x2, y2) <input type="text" id="x2inputBox" size="3">  
-<input type="text" id="y2inputBox" size="3"><br>  
-<button type="button" onclick="distance()">Distance</button>  
-<div id="outputDiv"></div>  
+(x1, y1) <input type="text" id="x1inputBox" size="3">
+<input type="text" id="y1inputBox" size="3"><br>
+(x2, y2) <input type="text" id="x2inputBox" size="3">
+<input type="text" id="y2inputBox" size="3"><br>
+<button type="button" onclick="distance()">Distance</button>
+<div id="outputDiv"></div>
 </body>
 </html>
